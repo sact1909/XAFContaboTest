@@ -9,12 +9,22 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  NUGET_URL: "https://nuget.devexpress.com/api"
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
     steps:
+    - name: Ensure GitHub NuGet Source
+      run: |
+        dotnet nuget add source ${{ env.NUGET_URL }} \
+        -n DevExpressFeed \
+        -u DevExpress \
+        -p ${{ secrets.DEVEXPRESS_NUGET_KEY }} \
+        --store-password-in-clear-text
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
