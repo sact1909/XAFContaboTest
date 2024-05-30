@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XAFContaboTest.Module", "XA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XAFContaboTest.Blazor.Server", "XAFContaboTest.Blazor.Server\XAFContaboTest.Blazor.Server.csproj", "{1E2B4885-D407-4D62-B620-B373043EEE9B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C44D420-02F6-4039-8CA0-8C4428AF0E9F}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget.Config = Nuget.Config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
